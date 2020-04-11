@@ -17,7 +17,7 @@ public class BookDataFetcher implements DataFetcher<Book>{
     public Book get(DataFetchingEnvironment dataFetchingEnvironment) {
 
         String isn = dataFetchingEnvironment.getArgument("id");
-
-        return bookRepository.findOne(isn);
+        Book book = bookRepository.findOne(isn);
+        return book;
     }
 }
